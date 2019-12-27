@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Counter from './component/counter';
+import Home from './pages/home';
+import { Route, Switch } from 'react-router-dom';
+import About from './pages/about';
+import CounterClass from './component/counter-class';
+import Menu from './component/menu';
+import DataDiri from './component/data-diri';
+import Card from './component/card';
+import Listmakanan from './pages/list-makanan';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Switch>
+        <Route path="/counter" exact component={Counter} />
+        <Route path="/" exact component={Home} />
+        <Route path="/About" exact component={About} />
+        <Route path="/counter-class" exact component={CounterClass} />
+        <Route path="/menu" exact component={Menu} />
+        <Route path="/data-diri" extact component={DataDiri} />
+        <Route path="/card" exact component={Card} />
+        <Route path="/List-makanan" exact component={Listmakanan} />
+      </Switch>
+    </React.Fragment>
   );
 }
 
