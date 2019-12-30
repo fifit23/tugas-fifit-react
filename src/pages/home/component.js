@@ -1,11 +1,18 @@
 import React from 'react';
-import DataDiri from '../../component/data-diri';
+import Appbar from '../../component/appbar';
+import Container from '@material-ui/core/Container';
+import CardKategori from '../../component/card-kategori';
+import CardFestfood from '../../component/card-fest-food';
 
 function Home() {
   return (
-    <React.Fragment>
-      <DataDiri nama="fifit" Umur="17 th" tanggal="21" />
-    </React.Fragment>
+    <Container maxWidth="xs">
+      <React.Fragment>
+        <Appbar title="selamat datang" />
+        <CardKategori />
+        <CardFestfood />
+      </React.Fragment>
+    </Container>
   );
 }
 export default Home;

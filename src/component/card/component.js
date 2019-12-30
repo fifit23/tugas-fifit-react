@@ -8,8 +8,8 @@ function Component(props) {
   const [number, setNumber] = useState(0);
   const { nama, harga, jenis, image } = props;
   return (
-    <Card style={{ width: 200 }}>
-      <CardMedia style={{ height: 100 }} image={image} />
+    <Card style={{ width: 400, paddingTop: '10%' }}>
+      <CardMedia style={{ height: 200 }} image={image} />
       <Typography variant="h5" component="h5">
         {nama}
       </Typography>
